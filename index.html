@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éclat Femme | Salão e Centro de Estética</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-serif font-bold text-pink-400">Éclat Femme</a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-700 hover:text-pink-500 transition">Início</a>
+                <a href="#services" class="text-gray-700 hover:text-pink-500 transition">Serviços</a>
+                <a href="#professionals" class="text-gray-700 hover:text-pink-500 transition">Profissionais</a>
+                <a href="#about" class="text-gray-700 hover:text-pink-500 transition">Sobre Nós</a>
+                <a href="#contact" class="text-gray-700 hover:text-pink-500 transition">Contato</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button id="loginBtn" class="hidden md:block px-4 py-2 text-pink-500 border border-pink-500 rounded-full hover:bg-pink-50 transition">Entrar</button>
+                <button id="bookNowBtn" class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition">Agendar</button>
+                
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="#" class="text-gray-700 hover:text-pink-500 py-2">Início</a>
+                <a href="#services" class="text-gray-700 hover:text-pink-500 py-2">Serviços</a>
+                <a href="#professionals" class="text-gray-700 hover:text-pink-500 py-2">Profissionais</a>
+                <a href="#about" class="text-gray-700 hover:text-pink-500 py-2">Sobre Nós</a>
+                <a href="#contact" class="text-gray-700 hover:text-pink-500 py-2">Contato</a>
+                <button class="text-left text-pink-500 py-2 border-t border-gray-200">Entrar</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-gradient py-16 md:py-24 relative overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 z-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
+                    Sua beleza merece <span class="text-pink-500">cuidado</span> e <span class="text-pink-500">exclusividade</span>
+                </h1>
+                <p class="text-gray-600 text-lg mb-8 max-w-lg">
+                    Na Éclat Femme, oferecemos tratamentos personalizados para realçar sua beleza natural. Agende agora sua experiência premium.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button id="heroBookBtn" class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600 transition shadow-lg hover:shadow-xl">
+                        Agendar Serviço
+                    </button>
+                    <button class="border border-pink-500 text-pink-500 px-6 py-3 rounded-full hover:bg-pink-50 transition">
+                        Nossos Serviços
+                    </button>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 relative">
+                <div class="relative max-w-lg mx-auto">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=800" alt="Professional beauty services" class="rounded-lg shadow-xl w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-white shadow-lg p-4 rounded-lg hidden md:block">
+                        <div class="flex items-center space-x-2">
+                            <div class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-700">+200 avaliações 5⭐</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Appointment Stats -->
+    <div class="bg-white shadow-md py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-around">
+                <div class="flex flex-col items-center mb-6 md:mb-0">
+                    <div class="text-3xl font-bold text-pink-500 mb-2">1500+</div>
+                    <div class="text-gray-600">Clientes Satisfeitas</div>
+                </div>
+                <div class="flex flex-col items-center mb-6 md:mb-0">
+                    <div class="text-3xl font-bold text-pink-500 mb-2">20+</div>
+                    <div class="text-gray-600">Profissionais Especializados</div>
+                </div>
+                <div class="flex flex-col items-center mb-6 md:mb-0">
+                    <div class="text-3xl font-bold text-pink-500 mb-2">50+</div>
+                    <div class="text-gray-600">Serviços Exclusivos</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="text-3xl font-bold text-pink-500 mb-2">95%</div>
+                    <div class="text-gray-600">Taxa de Recomendação</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossos Serviços</h2>
+                <div class="w-20 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Oferecemos uma variedade de serviços para cuidar da sua beleza e bem-estar. Tudo em um só lugar com profissionais altamente qualificados.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800" alt="Cabelos" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Cabelos</h3>
+                            <span class="text-pink-500 font-bold">R$ 120+</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Cortes, coloração, tratamentos e muito mais para cabelos saudáveis e bonitos.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="far fa-clock mr-1"></i> 1h - 3h</span>
+                            <button class="text-pink-500 hover:text-pink-600 font-medium">Ver opções <i class="fas fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="imagens/esteticafaciial.png"Estética Facial" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Estética Facial</h3>
+                            <span class="text-pink-500 font-bold">R$ 80+</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Limpeza de pele, hidratação, tratamentos anti-idade e muito mais para uma pele radiante.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="far fa-clock mr-1"></i> 30min - 1h30</span>
+                            <button class="text-pink-500 hover:text-pink-600 font-medium">Ver opções <i class="fas fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=800" alt="Manicure e Podologia" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Manicure & Podologia</h3>
+                            <span class="text-pink-500 font-bold">R$ 50+</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Cuidados completos para mãos e pés, incluindo esmaltação, tratamento de cutículas e podologia.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="far fa-clock mr-1"></i> 45min - 1h30</span>
+                            <button class="text-pink-500 hover:text-pink-600 font-medium">Ver opções <i class="fas fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="imagens/fotomassagem (1).png" alt="Massagens" class="w-full h-full object-cover"> 
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Massagens</h3>
+                            <span class="text-pink-500 font-bold">R$ 100+</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Relaxamento, drenagem linfática, modeladora e outras técnicas para seu bem-estar.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="far fa-clock mr-1"></i> 1h - 1h30</span>
+                            <button class="text-pink-500 hover:text-pink-600 font-medium">Ver opções <i class="fas fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="imagens/depilaçaofoto.jpg" alt="Depilação" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Depilação</h3>
+                            <span class="text-pink-500 font-bold">R$ 60+</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Depilação com cera, lâmina ou técnicas modernas para todos os tipos de pele.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="far fa-clock mr-1"></i> 30min - 1h</span>
+                            <button class="text-pink-500 hover:text-pink-600 font-medium">Ver opções <i class="fas fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800" alt="Dia de Spa" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Pacote Dia de Spa</h3>
+                            <span class="text-pink-500 font-bold">R$ 250+</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Experiência completa com múltiplos serviços para um dia de reequilíbrio e renovação.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="far fa-clock mr-1"></i> 3h - 5h</span>
+                            <button class="text-pink-500 hover:text-pink-600 font-medium">Ver opções <i class="fas fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-pink-500 text-pink-500 px-8 py-3 rounded-full hover:bg-pink-50 transition font-medium">
+                    Ver Todos os Serviços
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Packages -->
+    <section class="py-16 bg-gradient-to-r from-pink-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Pacotes Especiais</h2>
+                <div class="w-20 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Experimente nossos pacotes exclusivos que combinam os melhores serviços para uma experiência completa.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=800" alt="Pacote Noiva" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            Popular
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pacote Noiva</h3>
+                        <p class="text-gray-600 mb-4">
+                            Cabelo, maquiagem e cuidados completos para o seu grande dia.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-pink-500">R$ 350</span>
+                            <span class="text-sm text-gray-500 line-through">R$ 450</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-pink-500 mr-2"></i> Corte e escova
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-pink-500 mr-2"></i> Maquiagem profissional
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-pink-500 mr-2"></i> Manicure e pedicure
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-pink-500 mr-2"></i> Massagem relaxante
+                            </li>
+                        </ul>
+                        <button class="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg transition">
+                            Agendar Pacote
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 border-2 border-pink-500 relative">
+                    <div class="absolute top-0 left-0 bg-pink-500 text-white px-3 py-1 rounded-br-lg text-sm font-bold">
+                        Melhor Custo-Benefício
+                    </div>
+                    <div class="relative">
+                        <img src="imagens/diaspaluxoo.jpg" alt="Dia de Spa Luxo" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Dia de Spa Luxo</h3>
+                        <p class="text-gray-600 mb-4">
+                            Renove suas energias com uma jornada completa de cuidados.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-pink-500">R$ 280</span>
+                            <span class="text-sm text-gray-500 line-through">R$ 380</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-pink-500 mr-2"></i> Massagem relaxante 1h
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-pink-500 mr-2"></i> Limpeza de pele profunda
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-pink-500 mr-2"></i> Cabelo e tratamento capilar
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-pink-500 mr-2"></i> Manicure e pedicure spa
+                            </li>
+                        </ul>
+                        <button class="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg transition">
+                            Agendar Pacote
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="relative">
+                        <img src="imagens/glowupfoto.jpg" alt="Glow Up Mensal" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Glow Up Mensal</h3>
+                        <p class="text-gray-600 mb-4">
+                            Mantenha-se radiante com cuidados regulares programados.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-pink-500">R$ 180/mês</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-pink-500 mr-2"></i> 1 sessão de limpeza de pele
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-pink-500 mr-2"></i> 1 corte ou escova
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-pink-500 mr-2"></i> 1 manicure básica
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-pink-500 mr-2"></i> 10% de desconto em outros serviços
+                            </li>
+                        </ul>
+                        <button class="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg transition">
+                            Assinar Pacote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Professionals Section -->
+    <section id="professionals" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossos Profissionais</h2>
+                <div class="w-20 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Conheça nossa equipe de especialistas altamente qualificados e apaixonados por beleza.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Professional 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center card-hover">
+                    <div class="h-64 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?q=80&w=800" alt="Alexandra Costa" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Alexandra Costa</h3>
+                        <p class="text-pink-500 font-medium mb-3">Hair Stylist</p>
+                        <div class="flex justify-center space-x-1 mb-4">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Especialista em coloração e cortes modernos com 10 anos de experiência.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-pink-500 hover:text-pink-600"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-pink-500 hover:text-pink-600"><i class="far fa-calendar-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Professional 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center card-hover">
+                    <div class="h-64 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=800" alt="Isabela Martins" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Isabela Martins</h3>
+                        <p class="text-pink-500 font-medium mb-3">Esteticista</p>
+                        <div class="flex justify-center space-x-1 mb-4">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Especialista em tratamentos faciais avançados e técnicas de rejuvenescimento.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-pink-500 hover:text-pink-600"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-pink-500 hover:text-pink-600"><i class="far fa-calendar-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Professional 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center card-hover">
+                    <div class="h-64 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?q=80&w=800" alt="Camila Dias" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Camila Dias</h3>
+                        <p class="text-pink-500 font-medium mb-3">Manicure & Pedicure</p>
+                        <div class="flex justify-center space-x-1 mb-4">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Mestre em esmaltação gel e alongamentos de unhas, com técnicas inovadoras.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-pink-500 hover:text-pink-600"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-pink-500 hover:text-pink-600"><i class="far fa-calendar-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Professional 4 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center card-hover">
+                    <div class="h-64 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800" alt="Rafaela Santos" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Rafaela Santos</h3>
+                        <p class="text-pink-500 font-medium mb-3">Massoterapeuta</p>
+                        <div class="flex justify-center space-x-1 mb-4">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Especialista em massagens terapêuticas e técnicas de relaxamento profundo.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-pink-500 hover:text-pink-600"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-pink-500 hover:text-pink-600"><i class="far fa-calendar-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-pink-500 text-pink-500 px-8 py-3 rounded-full hover:bg-pink-50 transition font-medium">
+                    Conheça Toda a Equipe
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">O Que Nossas Clientes Dizem</h2>
+                <div class="w-20 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    A opinião de quem já experimentou nossos serviços e queremos compartilhar com você.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Maria" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Maria Fernanda</h4>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "O atendimento no Elegance é excepcional! A profissional que me atendeu foi muito atenciosa e cuidadosa. Meu cabelo nunca esteve tão saudável. Recomendo muito!"
+                    </p>
+                    <div class="mt-4 text-sm text-gray-500">02/05/2023</div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Juliana" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Juliana Almeida</h4>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star-half-alt text-yellow-400 text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Experiência incrível! Fiz o Pacote Dia de Spa e foi renovador. Ambiente limpo e agradável, profissionais qualificados. Já estou agendando meu próximo dia de spa."
+                    </p>
+                    <div class="mt-4 text-sm text-gray-500">22/04/2023</div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Carolina" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Carolina Rocha</h4>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Sou cliente assídua do Glow Up Mensal e não consigo mais ficar sem! O sistema de agendamento online é super prático e nunca precisei esperar. Serviços de primeira qualidade!"
+                    </p>
+                    <div class="mt-4 text-sm text-gray-500">15/04/2023</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581337204873-ef36aa186caa?q=80&w=800" alt="Our Salon" class="rounded-lg shadow-xl">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 shadow-lg rounded-lg hidden md:block">
+                            <div class="text-2xl font-bold text-pink-500">+10</div>
+                            <div class="text-gray-600">Anos de tradição</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Nossa História</h2>
+                    <div class="w-20 h-1 bg-pink-500 mb-6"></div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Fundado em 2012, o Elegance Beauty nasceu do sonho de oferecer um espaço onde beleza e bem-estar caminhassem juntos.
+                    </p>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Com o passar dos anos, consolidamos nossa reputação como o melhor salão da região graças à dedicação de nossa equipe e ao compromisso com a excelência em todos os serviços oferecidos.
+                    </p>
+                    
+                    <p class="text-gray-600 mb-6">
+                        Nossa missão é proporcionar experiências únicas e personalizadas, utilizando produtos de alta qualidade e técnicas atualizadas, sempre priorizando o conforto e satisfação de nossas clientes.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="bg-pink-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-award text-pink-500"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800">Prêmios</div>
+                                <div class="text-gray-500 text-sm">Melhor Salão 2022</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-pink-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-gem text-pink-500"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800">Qualidade</div>
+                                <div class="text-gray-500 text-sm">Produtos Premium</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-pink-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-user-graduate text-pink-500"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800">Profissionais</div>
+                                <div class="text-gray-500 text-sm">Certificados</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-pink-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-heart text-pink-500"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800">Clientes</div>
+                                <div class="text-gray-500 text-sm">92% de Retorno</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition">
+                        Conheça nosso Espaço
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Booking Section -->
+    <section id="booking" class="py-16 bg-gradient-to-b from-pink-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-pink-500 text-white p-8 md:p-12">
+                        <h2 class="text-3xl font-bold mb-6">Agende Seu Horário</h2>
+                        <div class="w-20 h-1 bg-white mb-6"></div>
+                        
+                        <p class="mb-6">
+                            Escolha seu serviço, profissional e horário. Garanta já sua experiência de beleza personalizada.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-white text-pink-500 rounded-full p-2 mr-4">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Agendamento Online</h4>
+                                    <p class="text-sm opacity-90">Escolha o melhor horário para você</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-white text-pink-500 rounded-full p-2 mr-4">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Profissionais Qualificados</h4>
+                                    <p class="text-sm opacity-90">Especialistas em cada área</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-white text-pink-500 rounded-full p-2 mr-4">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Pagamento Seguro</h4>
+                                    <p class="text-sm opacity-90">Diversas formas de pagamento</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <!-- Booking Steps -->
+                        <div class="booking-stepper flex justify-between mb-8">
+                            <div class="step flex flex-col items-center">
+                                <div class="w-8 h-8 rounded-full bg-pink-500 text-white flex items-center justify-center mb-2">1</div>
+                                <span class="text-xs text-gray-500">Serviço</span>
+                            </div>
+                            <div class="step flex flex-col items-center">
+                                <div class="w-8 h-8 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center mb-2">2</div>
+                                <span class="text-xs text-gray-500">Profissional</span>
+                            </div>
+                            <div class="step flex flex-col items-center">
+                                <div class="w-8 h-8 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center mb-2">3</div>
+                                <span class="text-xs text-gray-500">Horário</span>
+                            </div>
+                            <div class="step flex flex-col items-center">
+                                <div class="w-8 h-8 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center mb-2">4</div>
+                                <span class="text-xs text-gray-500">Pagamento</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 1: Choose Service -->
+                        <div id="step1" class="fade-in">
+                            <h3 class="text-xl font-bold text-gray-800 mb-6">Escolha seu serviço</h3>
+                            
+                            <div class="mb-6">
+                                <label for="serviceCategory" class="block text-gray-700 mb-2">Categoria</label>
+                                <select id="serviceCategory" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                                    <option value="">Todas as categorias</option>
+                                    <option value="hair">Cabelos</option>
+                                    <option value="facial">Estética Facial</option>
+                                    <option value="nails">Manicure & Podologia</option>
+                                    <option value="massage">Massagens</option>
+                                    <option value="waxing">Depilação</option>
+                                    <option value="packages">Pacotes</option>
+                                </select>
+                            </div>
+                            
+                            <div class="max-h-64 overflow-y-auto mb-6">
+                                <!-- Service list will be populated here -->
+                                <div class="p-4 border-b cursor-pointer hover:bg-pink-50">
+                                    <div class="flex justify-between">
+                                        <h4 class="font-medium">Corte Feminino</h4>
+                                        <span class="text-pink-500">R$ 120</span>
+                                    </div>
+                                    <p class="text-sm text-gray-500">Corte personalizado conforme seu estilo</p>
+                                    <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 1h</div>
+                                </div>
+                                
+                                <div class="p-4 border-b cursor-pointer hover:bg-pink-50">
+                                    <div class="flex justify-between">
+                                        <h4 class="font-medium">Coloração</h4>
+                                        <span class="text-pink-500">R$ 180+</span>
+                                    </div>
+                                    <p class="text-sm text-gray-500">Técnicas de coloração modernas</p>
+                                    <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 2h30</div>
+                                </div>
+                                
+                                <div class="p-4 border-b cursor-pointer hover:bg-pink-50">
+                                    <div class="flex justify-between">
+                                        <h4 class="font-medium">Limpeza de Pele Profissional</h4>
+                                        <span class="text-pink-500">R$ 90</span>
+                                    </div>
+                                    <p class="text-sm text-gray-500">Remoção de impurezas e hidratação</p>
+                                    <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 1h30</div>
+                                </div>
+                                
+                                <div class="p-4 border-b cursor-pointer hover:bg-pink-50">
+                                    <div class="flex justify-between">
+                                        <h4 class="font-medium">Manicure Completa</h4>
+                                        <span class="text-pink-500">R$ 60</span>
+                                    </div>
+                                    <p class="text-sm text-gray-500">Cuidados com cutículas e esmaltação</p>
+                                    <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 1h</div>
+                                </div>
+                                
+                                <div class="p-4 cursor-pointer hover:bg-pink-50 selected-service bg-pink-50 border-pink-200">
+                                    <div class="flex justify-between">
+                                        <h4 class="font-medium">Massagem Relaxante</h4>
+                                        <span class="text-pink-500">R$ 100</span>
+                                    </div>
+                                    <p class="text-sm text-gray-500">Alívio de tensões e relaxamento</p>
+                                    <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 1h</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-end">
+                                <button id="nextStep1" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full transition">
+                                    Próximo <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Choose Professional -->
+                        <div id="step2" class="hidden fade-in">
+                            <h3 class="text-xl font-bold text-gray-800 mb-6">Escolha seu profissional</h3>
+                            <p class="text-gray-600 mb-6">Você selecionou: <span class="font-medium">Massagem Relaxante</span></p>
+                            
+                            <div class="max-h-96 overflow-y-auto mb-6">
+                                <div class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
+                                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800" alt="Dr. Carlos" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-medium">Rafaela Santos</h4>
+                                        <p class="text-sm text-gray-500">Massoterapeuta</p>
+                                        <div class="flex items-center">
+                                            <div class="text-yellow-400 text-xs mr-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="text-xs text-gray-500">47 avaliações</span>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <i class="fas fa-chevron-right text-gray-400"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
+                                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800" alt="Dra. Ana" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-medium">Mariana Oliveira</h4>
+                                        <p class="text-sm text-gray-500">Massoterapeuta</p>
+                                        <div class="flex items-center">
+                                            <div class="text-yellow-400 text-xs mr-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                            <span class="text-xs text-gray-500">32 avaliações</span>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <i class="fas fa-chevron-right text-gray-400"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-4 border-b cursor-pointer bg-pink-50 border-pink-200 selected-professional">
+                                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800" alt="Dra. Carla" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-medium">Larissa Silva</h4>
+                                        <p class="text-sm text-gray-500">Massoterapeuta</p>
+                                        <div class="flex items-center">
+                                            <div class="text-yellow-400 text-xs mr-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="text-xs text-gray-500">68 avaliações</span>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <i class="fas fa-check text-pink-500"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-4 cursor-pointer hover:bg-pink-50">
+                                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800" alt="Dra. Sofia" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-medium">Qualquer profissional</h4>
+                                        <p class="text-sm text-gray-500">Será atendida pelo primeiro disponível</p>
+                                    </div>
+                                    <div class="ml-4">
+                                        <i class="fas fa-chevron-right text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-between mt-8">
+                                <button id="backStep2" class="text-pink-500 hover:text-pink-600 px-4 py-2 rounded-full transition">
+                                    <i class="fas fa-arrow-left mr-2"></i> Voltar
+                                </button>
+                                <button id="nextStep2" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full transition">
+                                    Próximo <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3: Choose Date & Time -->
+                        <div id="step3" class="hidden fade-in">
+                            <h3 class="text-xl font-bold text-gray-800 mb-6">Escolha data e horário</h3>
+                            <p class="text-gray-600 mb-6">Você está agendando: <span class="font-medium">Massagem Relaxante</span> com <span class="font-medium">Larissa Silva</span></p>
+                            
+                            <div class="mb-6 grid grid-cols-3 gap-4">
+                                <div class="col-span-3 sm:col-span-1">
+                                    <label class="block text-gray-700 mb-2">Mês</label>
+                                    <select class="w-full px-4 py-2 border rounded-lg">
+                                        <option>Maio 2023</option>
+                                        <option>Junho 2023</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-span-3 sm:col-span-2">
+                                    <label class="block text-gray-700 mb-2">Dia</label>
+                                    <div class="grid grid-cols-7 gap-2 text-center text-sm">
+                                        <div class="py-2 text-gray-400">Dom</div>
+                                        <div class="py-2 text-gray-400">Seg</div>
+                                        <div class="py-2 text-gray-400">Ter</div>
+                                        <div class="py-2 text-gray-400">Qua</div>
+                                        <div class="py-2 text-gray-400">Qui</div>
+                                        <div class="py-2 text-gray-400">Sex</div>
+                                        <div class="py-2 text-gray-400">Sáb</div>
+                                        
+                                        <div class="py-2 text-gray-400">30</div>
+                                        <div class="py-2 text-gray-400">1</div>
+                                        <div class="py-2 text-gray-400">2</div>
+                                        <div class="py-2 text-gray-400">3</div>
+                                        <div class="py-2 text-gray-400">4</div>
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">5</div>
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">6</div>
+                                        
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">7</div>
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">8</div>
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">9</div>
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">10</div>
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">11</div>
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">12</div>
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">13</div>
+                                        
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">14</div>
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">15</div>
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">16</div>
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">17</div>
+                                        <div class="py-2 bg-pink-500 text-white rounded-full font-bold">18</div>
+                                        <div class="py-2 bg-gray-200 rounded-full text-gray-400">19</div>
+                                        <div class="py-2 cursor-pointer hover:bg-pink-100 rounded-full">20</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2">Horários disponíveis</label>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                    <button class="py-2 border rounded-lg hover:bg-pink-100 hover:border-pink-300">08:00</button>
+                                    <button class="py-2 border rounded-lg hover:bg-pink-100 hover:border-pink-300">09:00</button>
+                                    <button class="py-2 border rounded-lg hover:bg-pink-100 hover:border-pink-300">10:00</button>
+                                    <button class="py-2 border rounded-lg hover:bg-pink-100 hover:border-pink-300">11:00</button>
+                                    <button class="py-2 border rounded-lg hover:bg-pink-100 hover:border-pink-300">14:00</button>
+                                    <button class="py-2 border rounded-lg hover:bg-pink-100 hover:border-pink-300">15:00</button>
+                                    <button class="py-2 border rounded-lg hover:bg-pink-100 hover:border-pink-300">16:00</button>
+                                    <button class="py-2 border rounded-lg bg-pink-500 text-white hover:bg-pink-600">17:00</button>
+                                    <button class="py-2 border rounded-lg hover:bg-pink-100 hover:border-pink-300">18:00</button>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-between mt-8">
+                                <button id="backStep3" class="text-pink-500 hover:text-pink-600 px-4 py-2 rounded-full transition">
+                                    <i class="fas fa-arrow-left mr-2"></i> Voltar
+                                </button>
+                                <button id="nextStep3" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full transition">
+                                    Próximo <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 4: Customer Info -->
+                        <div id="step4" class="hidden fade-in">
+                            <h3 class="text-xl font-bold text-gray-800 mb-6">Seus dados</h3>
+                            <p class="text-gray-600 mb-6">Você está agendando: <span class="font-medium">Massagem Relaxante</span> com <span class="font-medium">Larissa Silva</span> em <span class="font-medium">18/05/2023 às 17:00</span></p>
+                            
+                            <div class="mb-6">
+                                <label for="customerName" class="block text-gray-700 mb-2">Nome completo</label>
+                                <input type="text" id="customerName" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500" placeholder="Seu nome completo">
+                                <p id="nameError" class="text-red-500 text-sm mt-1 hidden">Por favor, insira seu nome completo</p>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="customerEmail" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="customerEmail" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500" placeholder="seu@email.com">
+                                <p id="emailError" class="text-red-500 text-sm mt-1 hidden">Por favor, insira um email válido</p>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="customerPhone" class="block text-gray-700 mb-2">Telefone</label>
+                                <input type="tel" id="customerPhone" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500" placeholder="(00) 00000-0000">
+                                <p id="phoneError" class="text-red-500 text-sm mt-1 hidden">Por favor, insira um telefone válido</p>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2">Observações (opcional)</label>
+                                <textarea class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500" rows="3" placeholder="Alguma observação sobre o serviço..."></textarea>
+                            </div>
+                            
+                            <div class="flex items-start mb-6">
+                                <input type="checkbox" id="policyCheck" class="mt-1 mr-3 custom-checkbox">
+                                <label for="policyCheck" class="text-gray-700 text-sm">
+                                    Concordo com a política de cancelamento que prevê a perda de 50% do valor em caso de não comparecimento. O valor restante ficará como crédito para agendamentos futuros.
+                                </label>
+                            </div>
+                            
+                            <div class="flex justify-between mt-8">
+                                <button id="backStep4" class="text-pink-500 hover:text-pink-600 px-4 py-2 rounded-full transition">
+                                    <i class="fas fa-arrow-left mr-2"></i> Voltar
+                                </button>
+                                <button id="nextStep4" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full transition">
+                                    Finalizar <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 5: Payment -->
+                        <div id="step5" class="hidden fade-in">
+                            <h3 class="text-xl font-bold text-gray-800 mb-6">Pagamento</h3>
+                            <p class="text-gray-600 mb-6">Resumo do agendamento:</p>
+                            
+                            <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                                <div class="flex justify-between mb-2">
+                                    <span>Serviço</span>
+                                    <span class="font-medium">Massagem Relaxante</span>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Profissional</span>
+                                    <span class="font-medium">Larissa Silva</span>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Data e Horário</span>
+                                    <span class="font-medium">18/05/2023 às 17:00</span>
+                                </div>
+                                <div class="flex justify-between text-lg font-bold mt-3 pt-3 border-t">
+                                    <span>Total</span>
+                                    <span>R$ 100,00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h4 class="font-bold text-gray-800 mb-4">Método de pagamento</h4>
+                                
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                                    <button class="border rounded-lg py-2 hover:shadow-md transition active border-pink-500">
+                                        <i class="fab fa-cc-visa text-2xl text-gray-700"></i>
+                                    </button>
+                                    <button class="border rounded-lg py-2 hover:shadow-md transition">
+                                        <i class="fab fa-cc-mastercard text-2xl text-gray-700"></i>
+                                    </button>
+                                    <button class="border rounded-lg py-2 hover:shadow-md transition">
+                                        <i class="fas fa-credit-card text-2xl text-gray-700"></i>
+                                    </button>
+                                    <button class="border rounded-lg py-2 hover:shadow-md transition">
+                                        <i class="fas fa-barcode text-2xl text-gray-700"></i>
+                                    </button>
+                                </div>
+                                
+                                <!-- Credit Card Form -->
+                                <div id="creditCardForm">
+                                    <div class="mb-4">
+                                        <label class="block text-gray-700 mb-2">Número do cartão</label>
+                                        <div class="relative">
+                                            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500" placeholder="0000 0000 0000 0000">
+                                            <div class="absolute inset-y-0 right-3 flex items-center">
+                                                <i class="fab fa-cc-visa text-xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="grid grid-cols-2 gap-4 mb-4">
+                                        <div>
+                                            <label class="block text-gray-700 mb-2">Validade</label>
+                                            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500" placeholder="MM/AA">
+                                        </div>
+                                        <div>
+                                            <label class="block text-gray-700 mb-2">CVV</label>
+                                            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500" placeholder="000">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label class="block text-gray-700 mb-2">Nome no cartão</label>
+                                        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500" placeholder="Nome como no cartão">
+                                    </div>
+                                    
+                                    <div class="flex items-start mb-6">
+                                        <input type="checkbox" id="saveCard" class="mt-1 mr-3 custom-checkbox">
+                                        <label for="saveCard" class="text-gray-700 text-sm">
+                                            Salvar cartão para pagamentos futuros
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-between mt-8">
+                                <button id="backStep5" class="text-pink-500 hover:text-pink-600 px-4 py-2 rounded-full transition">
+                                    <i class="fas fa-arrow-left mr-2"></i> Voltar
+                                </button>
+                                <button id="confirmPayment" class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-2 rounded-full transition flex items-center">
+                                    <span id="paymentText">Confirmar Pagamento</span>
+                                    <span id="paymentLoader" class="hidden ml-2">
+                                        <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-5 w-5"></div>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 6: Confirmation -->
+                        <div id="step6" class="hidden fade-in text-center py-8">
+                            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-check text-green-500 text-4xl"></i>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Agendamento Confirmado!</h3>
+                            <p class="text-gray-600 mb-6 max-w-md mx-auto">
+                                Você receberá um email com todos os detalhes do seu agendamento. Em caso de necessidade, entre em contato conosco.
+                            </p>
+                            
+                            <div class="bg-gray-50 rounded-lg p-4 mb-8 max-w-md mx-auto">
+                                <div class="flex justify-between mb-2">
+                                    <span>Código</span>
+                                    <span class="font-bold">#ELG-20230518-01</span>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Serviço</span>
+                                    <span class="font-medium">Massagem Relaxante</span>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Valor</span>
+                                    <span class="font-medium">R$ 100,00</span>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Data</span>
+                                    <span class="font-medium">18/05/2023</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Horário</span>
+                                    <span class="font-medium">17:00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-center space-x-4">
+                                <button class="border-2 border-pink-500 text-pink-500 hover:bg-pink-50 px-6 py-2 rounded-full transition">
+                                    <i class="far fa-calendar mr-2"></i> Adicionar ao Calendário
+                                </button>
+                                <button class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full transition">
+                                    <i class="fas fa-home mr-2"></i> Voltar ao Início
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Waiting List -->
+    <section id="waitingList" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-pink-50 rounded-xl p-8 md:p-12 shadow-md">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Lista de Espera</h2>
+                    <div class="w-20 h-1 bg-pink-500 mx-auto mb-6"></div>
+                    <p class="text-gray-600">
+                        Todos os horários estão ocupados? Cadastre-se em nossa lista de espera e se informe caso haja desistências ou adiantamentos.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Nome</label>
+                        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-2">Telefone</label>
+                        <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-2">Serviço desejado</label>
+                        <select class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                            <option>Massagem Relaxante</option>
+                            <option>Corte de Cabelo</option>
+                            <option>Manicure Completa</option>
+                            <option>Limpeza de Pele</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-2">Profissional (opcional)</label>
+                        <select class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                            <option>Qualquer profissional</option>
+                            <option>Larissa Silva</option>
+                            <option>Mariana Oliveira</option>
+                            <option>Rafaela Santos</option>
+                        </select>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-700 mb-2">Mensagem (opcional)</label>
+                        <textarea class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500" rows="3" placeholder="Informações adicionais..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="flex items-start mt-6">
+                    <input type="checkbox" id="notificationCheck" class="mt-1 mr-3 custom-checkbox">
+                    <label for="notificationCheck" class="text-gray-700 text-sm">
+                        Concordo em receber notificações via SMS ou WhatsApp sobre a disponibilidade de horários.
+                    </label>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <button class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full transition font-medium">
+                        Entrar na Lista de Espera
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
+                <div class="w-20 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                        Tem alguma dúvida ou sugestão? Estamos sempre disponíveis para te atender.
+                    </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center card-hover">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-phone-alt text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Telefone</h3>
+                    <p class="text-gray-600 mb-2">(11) 1234-5678</p>
+                    <p class="text-gray-600">(11) 98765-4321</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center card-hover">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-envelope text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Email</h3>
+                    <p class="text-gray-600 mb-2">contato@eclatfemme.com.br</p>
+                    <p class="text-gray-600">agendamento@eclatfemme.com.br</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center card-hover">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Endereço</h3>
+                    <p class="text-gray-600">Rua das Flores, 123</p>
+                    <p class="text-gray-600">Jardim Paulista - São Paulo/SP</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Envie uma mensagem</h3>
+                        
+                        <form>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2">Nome</label>
+                                <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2">Assunto</label>
+                                <select class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                                    <option>Dúvida sobre serviços</option>
+                                    <option>Reclamação</option>
+                                    <option>Sugestão</option>
+                                    <option>Parcerias</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2">Mensagem</label>
+                                <textarea class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500" rows="4"></textarea>
+                            </div>
+                            
+                            <button class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition w-full">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-gray-800 text-white p-8 md:p-12 relative">
+                        <h3 class="text-2xl font-bold mb-6">Horário de Funcionamento</h3>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between border-b border-gray-700 pb-2">
+                                <span>Segunda - Sexta</span>
+                                <span class="font-medium">09:00 - 19:00</span>
+                            </div>
+                            <div class="flex justify-between border-b border-gray-700 pb-2">
+                                <span>Sábado</span>
+                                <span class="font-medium">09:00 - 17:00</span>
+                            </div>
+                            <div class="flex justify-between border-b border-gray-700 pb-2">
+                                <span>Domingo</span>
+                                <span class="font-medium">Fechado</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mb-6">Nos acompanhe</h3>
+                        
+                        <div class="flex space-x-4 mb-8">
+                            <a href="#" class="bg-gray-700 hover:bg-pink-500 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-gray-700 hover:bg-pink-500 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-gray-700 hover:bg-pink-500 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="bg-gray-700 hover:bg-pink-500 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="absolute bottom-6 left-0 right-0 px-8 md:px-12">
+                            <div class="bg-white text-gray-800 rounded-lg p-4">
+                                <div class="flex items-center">
+                                    <div class="bg-pink-100 rounded-full p-3 mr-4">
+                                        <i class="fas fa-parking text-pink-500"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold">Estacionamento</div>
+                                        <div class="text-sm">Cortesia para clientes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="py-16 bg-pink-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-8 md:p-12 text-center">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Receba nossas novidades</h2>
+                <p class="text-gray-600 mb-6 max-w-md mx-auto">
+                    Assine nossa newsletter e receba promoções exclusivas, dicas de beleza e muito mais!
+                </p>
+                
+                <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
+                    <input type="email" placeholder="Seu melhor email" class="flex-1 px-4 py-3 border rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                    <button class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg transition flex-shrink-0">
+                        Assinar
+                    </button>
+                </form>
+                
+                <div class="flex items-center justify-center mt-6">
+                    <input type="checkbox" id="sendOffers" class="mr-3 custom-checkbox">
+                    <label for="sendOffers" class="text-gray-600 text-sm">
+                        Concordo em receber comunicações e ofertas personalizadas
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Elegance Beauty</h3>
+                    <p class="mb-4">
+                        Seu destino premium para cuidados de beleza e bem-estar.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-pink-400"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-pink-400"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Serviços</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-pink-400">Cabelos</a></li>
+                        <li><a href="#" class="hover:text-pink-400">Estética Facial</a></li>
+                        <li><a href="#" class="hover:text-pink-400">Manicure & Podologia</a></li>
+                        <li><a href="#" class="hover:text-pink-400">Massagens</a></li>
+                        <li><a href="#" class="hover:text-pink-400">Depilação</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Institucional</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-pink-400">Sobre Nós</a></li>
+                        <li><a href="#" class="hover:text-pink-400">Profissionais</a></li>
+                        <li><a href="#" class="hover:text-pink-400">Trabalhe Conosco</a></li>
+                        <li><a href="#" class="hover:text-pink-400">Políticas de Privacidade</a></li>
+                        <li><a href="#" class="hover:text-pink-400">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Atendimento</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2 text-sm"></i> (11) 1234-5678</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2 text-sm"></i> contato@elegance.com</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-sm"></i> Rua das Flores, 123</li>
+                        <li class="flex items-center"><i class="fas fa-clock mr-2 text-sm"></i> Seg-Sex: 9h-19h | Sáb: 9h-17h</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; 2023 Elegance Beauty. Todos os direitos reservados.</p>
+                <p class="mt-2">Desenvolvido com <i class="fas fa-heart text-pink-500"></i> para sua beleza.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white rounded-xl max-w-md w-full mx-4 transform transition-all duration-300 scale-95 opacity-0">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Área do Cliente</h3>
+                    <button id="closeLoginModal" class="text-gray-400 hover:text-gray-600">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Senha</label>
+                        <input type="password" class="w-full px-4 py-2 border rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                        <div class="text-right mt-2">
+                            <a href="#" class="text-sm text-pink-500 hover:underline">Esqueceu a senha?</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center mb-6">
+                        <input type="checkbox" id="rememberLogin" class="mr-3 custom-checkbox">
+                        <label for="rememberLogin" class="text-gray-700 text-sm">
+                            Lembrar de mim
+                        </label>
+                    </div>
+                    
+                    <button class="w-full bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-lg transition mb-4">
+                        Entrar
+                    </button>
+                    
+                    <div class="text-center">
+                        <p class="text-gray-600">
+                            Ainda não tem uma conta? 
+                            <a href="#" class="text-pink-500 hover:underline">Cadastre-se</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="bg-gray-50 px-6 py-4 rounded-b-xl text-center">
+                <p class="text-gray-600 mb-2">Ou acesse como</p>
+                <button class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-2 rounded-full transition inline-flex items-center">
+                    <i class="fab fa-google mr-2"></i> Google
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

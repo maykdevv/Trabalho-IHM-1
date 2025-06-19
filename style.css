@@ -1,0 +1,81 @@
+/* Custom CSS for elements not covered by Tailwind */
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(249,226,226,0.9) 0%, rgba(255,255,255,0.9) 100%);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: scale(1.02);
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.booking-stepper .step {
+    position: relative;
+}
+
+.booking-stepper .step:not(:last-child):after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    width: 20px;
+    height: 2px;
+    background-color: #e5e7eb;
+}
+
+.input-error {
+    border-color: #f87171;
+}
+
+.loader {
+    border-top-color: #f472b6;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom checkbox */
+.custom-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f472b6;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.custom-checkbox:checked {
+    background-color: #f472b6;
+}
+
+.custom-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
