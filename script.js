@@ -161,3 +161,42 @@ seletorCategoria?.addEventListener('change', () => {
         servico.classList.toggle('hidden', !pertence);
     });
 });
+
+// Mostrar/esconder serviços além dos 6 primeiros
+const cartasServicos = document.querySelectorAll('#servicos .service-card');
+const botaoServicos = document.getElementById('mostrarservicos');
+let mostrarTodosServicos = false;
+
+function atualizarServicos() {
+    cartasServicos.forEach((carta, indice) => {
+        carta.style.display = (indice < 6 || mostrarTodosServicos) ? 'block' : 'none';
+    });
+    botaoServicos.textContent = mostrarTodosServicos ? 'Mostrar Menos' : 'Ver Todos os Serviços';
+}
+
+botaoServicos?.addEventListener('click', () => {
+    mostrarTodosServicos = !mostrarTodosServicos;
+    atualizarServicos();
+});
+
+atualizarServicos();
+
+
+// Mostrar/esconder profissionais além dos 4 primeiros
+const cartasEquipe = document.querySelectorAll('#professionals .card-hover');
+const botaoEquipe = document.getElementById('mostrarprofissa');
+let mostrarTodaEquipe = false;
+
+function atualizarEquipe() {
+    cartasEquipe.forEach((carta, indice) => {
+        carta.style.display = (indice < 4 || mostrarTodaEquipe) ? 'block' : 'none';
+    });
+    botaoEquipe.textContent = mostrarTodaEquipe ? 'Mostrar Menos' : 'Conheça Toda a Equipe';
+}
+
+botaoEquipe?.addEventListener('click', () => {
+    mostrarTodaEquipe = !mostrarTodaEquipe;
+    atualizarEquipe();
+});
+
+atualizarEquipe();
