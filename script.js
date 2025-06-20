@@ -1,184 +1,163 @@
-// Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
+// CONTROLE DAS ETAPAS DE AGENDAMENTO E SELEÇÕES
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
+const etapas = [
+    document.getElementById('step1'),
+    document.getElementById('step2'),
+    document.getElementById('step3'),
+    document.getElementById('step4'),
+    document.getElementById('step5'),
+    document.getElementById('step6')
+];
 
-// Login Modal
-const loginBtn = document.getElementById('loginBtn');
-const loginModal = document.getElementById('loginModal');
-const closeLoginModal = document.getElementById('closeLoginModal');
+const botoesAvancar = document.querySelectorAll('[id^=nextStep]');
+const botoesVoltar = document.querySelectorAll('[id^=backStep]');
+const indicadores = document.querySelectorAll('.booking-stepper .step div:first-child');
 
-loginBtn?.addEventListener('click', () => {
-    loginModal.classList.remove('hidden');
-    setTimeout(() => {
-        document.querySelector('#loginModal > div').classList.remove('scale-95', 'opacity-0');
-    }, 10);
-});
+let etapaAtual = 0;
 
-closeLoginModal.addEventListener('click', () => {
-    document.querySelector('#loginModal > div').classList.add('scale-95', 'opacity-0');
-    setTimeout(() => {
-        loginModal.classList.add('hidden');
-    }, 300);
-});
+function mostrarEtapa(novaEtapa) {
+    etapas[etapaAtual].classList.add('hidden');
+    etapas[novaEtapa].classList.remove('hidden');
+    etapaAtual = novaEtapa;
 
-// Mobile menu items - in case you want to add click handlers
-const mobileMenuItems = document.querySelectorAll('#mobileMenu a');
-mobileMenuItems.forEach(item => {
-    item.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
+    indicadores.forEach((el, index) => {
+        if (index === etapaAtual) {
+            el.classList.remove('bg-gray-200', 'text-gray-500');
+            el.classList.add('bg-pink-500', 'text-white');
+        } else {
+            el.classList.remove('bg-pink-500', 'text-white');
+            el.classList.add('bg-gray-200', 'text-gray-500');
+        }
+    });
+}
+
+botoesAvancar.forEach(btn => btn.addEventListener('click', () => mostrarEtapa(etapaAtual + 1)));
+botoesVoltar.forEach(btn => btn.addEventListener('click', () => mostrarEtapa(etapaAtual - 1)));
+
+// Selecionar profissional (só 1)
+const profissionais = document.querySelectorAll('#step2 .cursor-pointer');
+profissionais.forEach(p => {
+    p.addEventListener('click', () => {
+        profissionais.forEach(outro => outro.classList.remove('bg-pink-50', 'border-pink-200'));
+        p.classList.add('bg-pink-50', 'border-pink-200');
     });
 });
 
-// Booking Steps Navigation
-const nextStep1 = document.getElementById('nextStep1');
-const nextStep2 = document.getElementById('nextStep2');
-const nextStep3 = document.getElementById('nextStep3');
-const nextStep4 = document.getElementById('nextStep4');
-
-const backStep2 = document.getElementById('backStep2');
-const backStep3 = document.getElementById('backStep3');
-const backStep4 = document.getElementById('backStep4');
-const backStep5 = document.getElementById('backStep5');
-
-const step1 = document.getElementById('step1');
-const step2 = document.getElementById('step2');
-const step3 = document.getElementById('step3');
-const step4 = document.getElementById('step4');
-const step5 = document.getElementById('step5');
-const step6 = document.getElementById('step6');
-
-nextStep1?.addEventListener('click', () => {
-    step1.classList.add('hidden');
-    step2.classList.remove('hidden');
+// Selecionar horário (só 1)
+const horarios = document.querySelectorAll('#step3 .grid button');
+horarios.forEach(horario => {
+    horario.addEventListener('click', () => {
+        horarios.forEach(h => h.classList.remove('bg-pink-500', 'text-white'));
+        horario.classList.add('bg-pink-500', 'text-white');
+    });
 });
 
-nextStep2?.addEventListener('click', () => {
-    step2.classList.add('hidden');
-    step3.classList.remove('hidden');
+// Atualizar meses do seletor para julho-dezembro 2025
+const seletorMes = document.querySelector('#step3 select');
+if (seletorMes) {
+    seletorMes.innerHTML = `
+    <option>Julho 2025</option>
+    <option>Agosto 2025</option>
+    <option>Setembro 2025</option>
+    <option>Outubro 2025</option>
+    <option>Novembro 2025</option>
+    <option>Dezembro 2025</option>`;
+}
+
+// Pagamento - simulação carregamento
+const botaoPagamento = document.getElementById('confirmPayment');
+const textoPagamento = document.getElementById('paymentText');
+const carregandoPagamento = document.getElementById('paymentLoader');
+
+botaoPagamento?.addEventListener('click', () => {
+    textoPagamento?.classList.add('hidden');
+    carregandoPagamento?.classList.remove('hidden');
+
+    setTimeout(() => mostrarEtapa(etapaAtual + 1), 2000);
 });
 
-nextStep3?.addEventListener('click', () => {
-    step3.classList.add('hidden');
-    step4.classList.remove('hidden');
-});
-
-nextStep4?.addEventListener('click', () => {
-    // Validate form
-    const nameInput = document.getElementById('customerName');
-    const emailInput = document.getElementById('customerEmail');
-    const phoneInput = document.getElementById('customerPhone');
-    const policyCheck = document.getElementById('policyCheck');
-    
-    const nameError = document.getElementById('nameError');
-    const emailError = document.getElementById('emailError');
-    const phoneError = document.getElementById('phoneError');
-    
-    let isValid = true;
-    
-    if (!nameInput.value.trim()) {
-        nameError.classList.remove('hidden');
-        nameInput.classList.add('input-error');
-        isValid = false;
-    } else {
-        nameError.classList.add('hidden');
-        nameInput.classList.remove('input-error');
+function rolarSuavemente(ancoraId) {
+    const alvo = document.getElementById(ancoraId);
+    if (alvo) {
+        window.scrollTo({
+            top: alvo.offsetTop - 60, // opcional: ajustar offset do topo
+            behavior: 'smooth'
+        });
     }
-    
-    if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
-        emailError.classList.remove('hidden');
-        emailInput.classList.add('input-error');
-        isValid = false;
-    } else {
-        emailError.classList.add('hidden');
-        emailInput.classList.remove('input-error');
-    }
-    
-    if (!phoneInput.value.trim() || phoneInput.value.length < 11) {
-        phoneError.classList.remove('hidden');
-        phoneInput.classList.add('input-error');
-        isValid = false;
-    } else {
-        phoneError.classList.add('hidden');
-        phoneInput.classList.remove('input-error');
-    }
-    
-    if (!policyCheck.checked) {
-        policyCheck.classList.add('input-error');
-        isValid = false;
-    } else {
-        policyCheck.classList.remove('input-error');
-    }
-    
-    if (isValid) {
-        step4.classList.add('hidden');
-        step5.classList.remove('hidden');
-    }
+}
+
+document.getElementById('rolarParaAgendamento')?.addEventListener('click', () => {
+    rolarSuavemente('booking');
 });
 
-backStep2?.addEventListener('click', () => {
-    step2.classList.add('hidden');
-    step1.classList.remove('hidden');
+document.getElementById('rolarParaServicos')?.addEventListener('click', () => {
+    rolarSuavemente('services');
 });
 
-backStep3?.addEventListener('click', () => {
-    step3.classList.add('hidden');
-    step2.classList.remove('hidden');
-});
-
-backStep4?.addEventListener('click', () => {
-    step4.classList.add('hidden');
-    step3.classList.remove('hidden');
-});
-
-backStep5?.addEventListener('click', () => {
-    step5.classList.add('hidden');
-    step4.classList.remove('hidden');
-});
-
-// Simulate payment processing
-const confirmPayment = document.getElementById('confirmPayment');
-const paymentText = document.getElementById('paymentText');
-const paymentLoader = document.getElementById('paymentLoader');
-
-confirmPayment?.addEventListener('click', () => {
-    paymentText.classList.add('hidden');
-    paymentLoader.classList.remove('hidden');
-    
-    setTimeout(() => {
-        step5.classList.add('hidden');
-        step6.classList.remove('hidden');
-    }, 2000);
-});
-
-// Book Now buttons trigger the booking section
-const bookNowBtn = document.getElementById('bookNowBtn');
-const heroBookBtn = document.getElementById('heroBookBtn');
-const bookingSection = document.getElementById('booking');
-
-const scrollToBooking = () => {
-    bookingSection.scrollIntoView({ behavior: 'smooth' });
-    
-    // Auto-select the first service
-    setTimeout(() => {
-        const serviceItems = document.querySelectorAll('.service-card');
-        if (serviceItems.length > 0) {
-            serviceItems[0].click();
+// Etapas de navegação do agendamento
+document.querySelectorAll('[id^=nextStep]').forEach(botao =>
+    botao.addEventListener('click', () => {
+        const etapaAtual = document.querySelector('.step-content:not(.hidden)');
+        const proxima = etapaAtual.nextElementSibling;
+        if (proxima) {
+            etapaAtual.classList.add('hidden');
+            proxima.classList.remove('hidden');
+            atualizarIndicadores();
         }
-    }, 1000);
-};
+    })
+);
 
-bookNowBtn?.addEventListener('click', scrollToBooking);
-heroBookBtn?.addEventListener('click', scrollToBooking);
+document.querySelectorAll('[id^=backStep]').forEach(botao =>
+    botao.addEventListener('click', () => {
+        const etapaAtual = document.querySelector('.step-content:not(.hidden)');
+        const anterior = etapaAtual.previousElementSibling;
+        if (anterior) {
+            etapaAtual.classList.add('hidden');
+            anterior.classList.remove('hidden');
+            atualizarIndicadores();
+        }
+    })
+);
 
-// Service selection
-const serviceItems = document.querySelectorAll('.service-card');
-serviceItems.forEach(item => {
-    item.addEventListener('click', function() {
-        serviceItems.forEach(i => i.classList.remove('selected-service'));
-        this.classList.add('selected-service');
+// Atualiza visual da barra de progresso de etapas
+function atualizarIndicadores() {
+    const etapas = Array.from(document.querySelectorAll('.step-content'));
+    const indexAtual = etapas.findIndex(etapa => !etapa.classList.contains('hidden'));
+
+    document.querySelectorAll('.booking-stepper .step div:first-child').forEach((etapa, i) => {
+        etapa.classList.toggle('bg-pink-500', i === indexAtual);
+        etapa.classList.toggle('text-white', i === indexAtual);
+        etapa.classList.toggle('bg-gray-200', i !== indexAtual);
+        etapa.classList.toggle('text-gray-500', i !== indexAtual);
+    });
+}
+
+// Seleciona apenas 1 profissional
+document.querySelectorAll('#step2 .cursor-pointer').forEach(el => {
+    el.addEventListener('click', () => {
+        document.querySelectorAll('#step2 .cursor-pointer').forEach(p =>
+            p.classList.remove('bg-pink-50', 'border-pink-200')
+        );
+        el.classList.add('bg-pink-50', 'border-pink-200');
+    });
+});
+
+// Seleciona apenas 1 serviço com destaque
+document.querySelectorAll('#step1 .cursor-pointer').forEach(el => {
+    el.addEventListener('click', () => {
+        document.querySelectorAll('#step1 .cursor-pointer').forEach(p =>
+            p.classList.remove('bg-pink-50', 'border-pink-200')
+        );
+        el.classList.add('bg-pink-50', 'border-pink-200');
+    });
+});
+
+// Filtro de categoria de serviços
+const seletorCategoria = document.getElementById('serviceCategory');
+seletorCategoria?.addEventListener('change', () => {
+    const categoriaSelecionada = seletorCategoria.value;
+    document.querySelectorAll('[data-categoria-servico]').forEach(servico => {
+        const pertence = servico.dataset.categoriaServico === categoriaSelecionada || categoriaSelecionada === "";
+        servico.classList.toggle('hidden', !pertence);
     });
 });
