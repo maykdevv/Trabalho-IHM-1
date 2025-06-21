@@ -21,16 +21,18 @@
             <nav class="hidden md:flex space-x-8">
                 <a href="#" class="text-gray-700 hover:text-pink-500 transition">Início</a>
                 <a href="#servicos" class="text-gray-700 hover:text-pink-500 transition">Serviços</a>
-                <a href="#professionals" class="text-gray-700 hover:text-pink-500 transition">Profissionais</a>
-                <a href="#about" class="text-gray-700 hover:text-pink-500 transition">Sobre Nós</a>
-                <a href="#contact" class="text-gray-700 hover:text-pink-500 transition">Contato</a>
+                <a href="#profissionais" class="text-gray-700 hover:text-pink-500 transition">Profissionais</a>
+                <a href="#sobre" class="text-gray-700 hover:text-pink-500 transition">Sobre Nós</a>
+                <a href="#contato" class="text-gray-700 hover:text-pink-500 transition">Contato</a>
             </nav>
 
             <div class="flex items-center space-x-4">
                 <button onclick="window.location.href='login.html'"
                     class="hidden md:block px-4 py-2 text-pink-500 border border-pink-500 rounded-full hover:bg-pink-50 transition">Entrar</button>
-                <button id="bookNowBtn"
+
+                <button id="rolarParaAgendamento"
                     class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition">Agendar</button>
+
 
                 <button id="mobileMenuBtn" class="md:hidden text-gray-700">
                     <i class="fas fa-bars text-2xl"></i>
@@ -43,9 +45,9 @@
             <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
                 <a href="#" class="text-gray-700 hover:text-pink-500 py-2">Início</a>
                 <a href="#servicos" class="text-gray-700 hover:text-pink-500 py-2">Serviços</a>
-                <a href="#professionals" class="text-gray-700 hover:text-pink-500 py-2">Profissionais</a>
-                <a href="#about" class="text-gray-700 hover:text-pink-500 py-2">Sobre Nós</a>
-                <a href="#contact" class="text-gray-700 hover:text-pink-500 py-2">Contato</a>
+                <a href="#profissionais" class="text-gray-700 hover:text-pink-500 py-2">Profissionais</a>
+                <a href="#sobre" class="text-gray-700 hover:text-pink-500 py-2">Sobre Nós</a>
+                <a href="#contato" class="text-gray-700 hover:text-pink-500 py-2">Contato</a>
                 <button class="text-left text-pink-500 py-2 border-t border-gray-200">Entrar</button>
             </div>
         </div>
@@ -64,22 +66,21 @@
                     sua experiência premium.
                 </p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <button id="rolarParaAgendamento"
+                    <a href="#secaoAgendar"
                         class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600 transition shadow-lg hover:shadow-xl">
                         Agendar Serviço
-                    </button>
-                    <button id="rolarParaServicos"
-                        class="border border-pink-500 text-pink-500 px-6 py-3 rounded-full hover:bg-pink-50 transition">
-                        Nossos Serviços
-                    </button>
+                    </a>
 
+                    <a href="#servicos"
+                        class="border border-pink-500 text-pink-500 px-6 py-3 rounded-full hover:bg-pink-50 transition">
+                        Nossos Serviços </a>
                 </div>
             </div>
 
             <div class="md:w-1/2 relative">
                 <div class="relative max-w-lg mx-auto">
                     <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=800"
-                        alt="Professional de beleza" class="rounded-lg shadow-xl w-full">
+                        alt="profissional de beleza" class="rounded-lg shadow-xl w-full">
                     <div class="absolute -bottom-6 -left-6 bg-white shadow-lg p-4 rounded-lg hidden md:block">
                         <div class="flex items-center space-x-2">
                             <div class="text-yellow-400">
@@ -251,8 +252,7 @@
                 <div
                     class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-48 overflow-hidden">
-                        <img src="imagens/cortemasc.jpg"
-                            alt="Corte Masculino" class="w-full h-full object-cover">
+                        <img src="imagens/cortemasc.jpg" alt="Corte Masculino" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
@@ -276,8 +276,7 @@
                 <div
                     class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-48 overflow-hidden">
-                        <img src="imagens/barba.jpg"
-                            alt="trato de barba" class="w-full h-full object-cover">
+                        <img src="imagens/barba.jpg" alt="trato de barba" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
@@ -299,8 +298,7 @@
                 <div
                     class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-48 overflow-hidden">
-                        <img src="imagens/sobrancelha.png"
-                            alt="sobrancelha brabona" class="w-full h-full object-cover">
+                        <img src="imagens/sobrancelha.png" alt="sobrancelha brabona" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
@@ -344,8 +342,7 @@
                 <div
                     class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-48 overflow-hidden">
-                        <img src="imagens/spazin.png"
-                            alt="Dia de Spa" class="w-full h-full object-cover">
+                        <img src="imagens/spazin.png" alt="Dia de Spa" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
@@ -367,8 +364,7 @@
                 <div
                     class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-48 overflow-hidden">
-                        <img src="imagens/noiva.png"
-                            alt="Dia de noiva" class="w-full h-full object-cover">
+                        <img src="imagens/noiva.png" alt="Dia de noiva" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
@@ -387,7 +383,7 @@
                 </div>
             </div>
 
-        <!-- aqui termina e mostra os serviços restantes -->
+            <!-- aqui termina e mostra os serviços restantes -->
             <div class="text-center mt-12">
                 <button id="mostrarservicos"
                     class="border-2 border-pink-500 text-pink-500 px-8 py-3 rounded-full hover:bg-pink-50 transition font-medium">
@@ -444,9 +440,9 @@
                                 <i class="fas fa-check text-pink-500 mr-2"></i> Massagem relaxante
                             </li>
                         </ul>
-                        <button class="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg transition">
-                            Agendar Pacote
-                        </button>
+                        <button onclick="rolarSuavemente('secaoAgendar')"
+                            class="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg transition">Agendar
+                            Pacote</button>
                     </div>
                 </div>
 
@@ -482,9 +478,9 @@
                                 <i class="fas fa-check text-pink-500 mr-2"></i> Manicure e pedicure spa
                             </li>
                         </ul>
-                        <button class="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg transition">
-                            Agendar Pacote
-                        </button>
+                        <button onclick="rolarSuavemente('secaoAgendar')"
+                            class="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg transition">Agendar
+                            Pacote</button>
                     </div>
                 </div>
 
@@ -516,9 +512,9 @@
                                 <i class="fas fa-check text-pink-500 mr-2"></i> 10% de desconto em outros serviços
                             </li>
                         </ul>
-                        <button class="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg transition">
-                            Assinar Pacote
-                        </button>
+                        <button onclick="rolarSuavemente('secaoAgendar')"
+                            class="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg transition">Assinar
+                            Pacote</button>
                     </div>
                 </div>
             </div>
@@ -526,7 +522,7 @@
     </section>
 
     <!-- profissionais -->
-    <section id="professionals" class="py-16 bg-white">
+    <section id="profissionais" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossos Profissionais</h2>
@@ -540,8 +536,7 @@
                 <!-- Profissional 1 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center card-hover">
                     <div class="h-64 w-full overflow-hidden">
-                        <img src="imagens/jose.png"
-                            alt="Alexandra Costa" class="w-full h-full object-cover">
+                        <img src="imagens/jose.png" alt="Alexandra Costa" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-1">José Costa</h3>
@@ -567,8 +562,7 @@
                 <!-- Profissional 2 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center card-hover">
                     <div class="h-64 w-full overflow-hidden">
-                        <img src="imagens/maria.png"
-                            alt="Maria Martins" class="w-full h-full object-cover">
+                        <img src="imagens/maria.png" alt="Maria Martins" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-1">Maria Martins</h3>
@@ -594,8 +588,7 @@
                 <!-- Profissional 3 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center card-hover">
                     <div class="h-64 w-full overflow-hidden">
-                        <img src="imagens/camilinha.png"
-                            alt="Camila Dias" class="w-full h-full object-cover">
+                        <img src="imagens/camilinha.png" alt="Camila Dias" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-1">Camila Dias</h3>
@@ -621,8 +614,7 @@
                 <!-- Profissional 4 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center card-hover">
                     <div class="h-64 w-full overflow-hidden">
-                        <img src="imagens/rafaela.png"
-                            alt="Rafaela Santos" class="w-full h-full object-cover">
+                        <img src="imagens/rafaela.png" alt="Rafaela Santos" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-1">Rafaela Santos</h3>
@@ -644,11 +636,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Professional 5 -->
+                <!-- profissional 5 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center card-hover">
                     <div class="h-64 w-full overflow-hidden">
-                        <img src="imagens/joao.png"
-                            alt="Joao Marques" class="w-full h-full object-cover">
+                        <img src="imagens/joao.png" alt="Joao Marques" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-1">João Marques</h3>
@@ -674,8 +665,7 @@
                 <!-- Profissional 6 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center card-hover">
                     <div class="h-64 w-full overflow-hidden">
-                        <img src="imagens/pedro.png"
-                            alt="Pedro Silva" class="w-full h-full object-cover">
+                        <img src="imagens/pedro.png" alt="Pedro Silva" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-1">Pedro Silva</h3>
@@ -700,8 +690,7 @@
                 <!-- Profissional 7 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center card-hover">
                     <div class="h-64 w-full overflow-hidden">
-                        <img src="imagens/matheus.png"
-                            alt="Matheus Pereira" class="w-full h-full object-cover">
+                        <img src="imagens/matheus.png" alt="Matheus Pereira" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-1">Matheus Pereira</h3>
@@ -727,8 +716,7 @@
                 <!-- Profissional 8 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center card-hover">
                     <div class="h-64 w-full overflow-hidden">
-                        <img src="imagens/carla.png"
-                            alt="Carla Correa" class="w-full h-full object-cover">
+                        <img src="imagens/carla.png" alt="Carla Correa" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-1">Carla Correa</h3>
@@ -851,7 +839,7 @@
     </section>
 
     <!-- sobre nois -->
-    <section id="about" class="py-16 bg-white">
+    <section id="sobre" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
@@ -935,7 +923,7 @@
     </section>
 
     <!-- agende seu horario rosa grandao -->
-    <section id="booking" class="py-16 bg-gradient-to-b from-pink-50 to-white">
+    <section id="secaoAgendar" class="py-16 bg-gradient-to-b from-pink-50 to-white">
         <div class="container mx-auto px-4">
             <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
                 <div class="md:flex">
@@ -981,10 +969,10 @@
                         </div>
                     </div>
 
-<!-- passos do agendamento ali inriba -->
- 
+                    <!-- passos do agendamento ali inriba -->
+
                     <div class="md:w-1/2 p-8 md:p-12">
-                        
+
                         <div class="booking-stepper flex justify-between mb-8">
                             <div class="step flex flex-col items-center">
                                 <div
@@ -1064,7 +1052,8 @@
                                     <div class="flex justify-between items-center">
                                         <div>
                                             <h4 class="font-medium">Progressiva</h4>
-                                            <p class="text-sm text-gray-500">Processo para alisar e hidratar o cabelo.</p>
+                                            <p class="text-sm text-gray-500">Processo para alisar e hidratar o cabelo.
+                                            </p>
                                             <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 40
                                                 min</div>
                                         </div>
@@ -1084,7 +1073,7 @@
                                         <span class="text-pink-500 font-semibold">R$ 30</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="p-4 border-b cursor-pointer hover:bg-pink-50 transition rounded-lg mb-2"
                                     data-categoria-servico="cabelos">
                                     <div class="flex justify-between items-center">
@@ -1182,7 +1171,8 @@
                                         <div>
                                             <h4 class="font-medium">Manicure Completa</h4>
                                             <p class="text-sm text-gray-500">Cuidados com cutículas e esmaltação.</p>
-                                            <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 1h20
+                                            <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i>
+                                                1h20
                                             </div>
                                         </div>
                                         <span class="text-pink-500 font-semibold">R$ 60</span>
@@ -1208,7 +1198,8 @@
                                         <div>
                                             <h4 class="font-medium">Cuidados Unha De Gel</h4>
                                             <p class="text-sm text-gray-500">Manutenção de unhas de gel.</p>
-                                            <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 35min
+                                            <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i>
+                                                35min
                                             </div>
                                         </div>
                                         <span class="text-pink-500 font-semibold">R$ 30</span>
@@ -1234,7 +1225,8 @@
                                         <div>
                                             <h4 class="font-medium">Banho De Fibra</h4>
                                             <p class="text-sm text-gray-500">Processo de alongamento das unhas.</p>
-                                            <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 50 min
+                                            <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 50
+                                                min
                                             </div>
                                         </div>
                                         <span class="text-pink-500 font-semibold">R$ 70</span>
@@ -1247,7 +1239,8 @@
                                         <div>
                                             <h4 class="font-medium">Massagem Relaxante</h4>
                                             <p class="text-sm text-gray-500">Alívio de tensões e relaxamento.</p>
-                                            <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 30 min
+                                            <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 30
+                                                min
                                             </div>
                                         </div>
                                         <span class="text-pink-500 font-semibold">R$ 100</span>
@@ -1285,8 +1278,9 @@
                                     <div class="flex justify-between items-center">
                                         <div>
                                             <h4 class="font-medium">Pacote Glow Up Mensal</h4>
-                                            <p class="text-sm text-gray-500">Cuidados regulares: limpeza de pele, corte, escova <br>
-                                            ou manicure.</p>
+                                            <p class="text-sm text-gray-500">Cuidados regulares: limpeza de pele, corte,
+                                                escova <br>
+                                                ou manicure.</p>
                                             <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i>
                                                 2h30</div>
                                         </div>
@@ -1325,7 +1319,8 @@
                                     <div class="flex justify-between items-center">
                                         <div>
                                             <h4 class="font-medium">Dia De Noiva</h4>
-                                            <p class="text-sm text-gray-500">Massagem longa, facial, hidratação capilar e unhas. </p>
+                                            <p class="text-sm text-gray-500">Massagem longa, facial, hidratação capilar
+                                                e unhas. </p>
                                             <div class="text-xs text-gray-400 mt-1"><i class="far fa-clock mr-1"></i> 4h
                                             </div>
                                         </div>
@@ -1347,13 +1342,13 @@
 
                         <div id="step2" class="hidden fade-in">
                             <h3 class="text-xl font-bold text-gray-800 mb-6">Escolha seu profissional</h3>
-                            <p class="text-gray-600 mb-6">Você selecionou: <span class="font-medium">Escolha Anterior</span></p>
+                            <p class="text-gray-600 mb-6">Você selecionou: <span class="font-medium">Escolha
+                                    Anterior</span></p>
 
                             <div class="max-h-96 overflow-y-auto mb-6">
                                 <div class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
                                     <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-                                        <img src="imagens/joao.png"
-                                            alt="Joao" class="w-full h-full object-cover">
+                                        <img src="imagens/joao.png" alt="Joao" class="w-full h-full object-cover">
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-medium">João Marques</h4>
@@ -1376,8 +1371,7 @@
 
                                 <div class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
                                     <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-                                        <img src="imagens/jose.png"
-                                            alt="Jose" class="w-full h-full object-cover">
+                                        <img src="imagens/jose.png" alt="Jose" class="w-full h-full object-cover">
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-medium">José Costa</h4>
@@ -1398,11 +1392,9 @@
                                     </div>
                                 </div>
 
-                                <div
-                                    class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
+                                <div class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
                                     <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-                                        <img src="imagens/rafaela.png"
-                                            alt="Rafaela" class="w-full h-full object-cover">
+                                        <img src="imagens/rafaela.png" alt="Rafaela" class="w-full h-full object-cover">
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-medium">Rafaela Santos</h4>
@@ -1423,11 +1415,10 @@
                                     </div>
                                 </div>
 
-                                <div
-                                    class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
+                                <div class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
                                     <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-                                        <img src="imagens/camilinha.png"
-                                            alt="camila" class="w-full h-full object-cover">
+                                        <img src="imagens/camilinha.png" alt="camila"
+                                            class="w-full h-full object-cover">
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-medium">Camila Dias</h4>
@@ -1448,11 +1439,9 @@
                                     </div>
                                 </div>
 
-                                <div
-                                    class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
+                                <div class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
                                     <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-                                        <img src="imagens/carla.png"
-                                            alt="carla" class="w-full h-full object-cover">
+                                        <img src="imagens/carla.png" alt="carla" class="w-full h-full object-cover">
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-medium">Carla Correa</h4>
@@ -1473,11 +1462,9 @@
                                     </div>
                                 </div>
 
-                                <div
-                                    class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
+                                <div class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
                                     <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-                                        <img src="imagens/maria.png"
-                                            alt="maria" class="w-full h-full object-cover">
+                                        <img src="imagens/maria.png" alt="maria" class="w-full h-full object-cover">
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-medium">Maria Martins</h4>
@@ -1498,11 +1485,9 @@
                                     </div>
                                 </div>
 
-                                <div
-                                    class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
+                                <div class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
                                     <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-                                        <img src="imagens/matheus.png"
-                                            alt="matheus" class="w-full h-full object-cover">
+                                        <img src="imagens/matheus.png" alt="matheus" class="w-full h-full object-cover">
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-medium">Matheus Pereira</h4>
@@ -1523,11 +1508,9 @@
                                     </div>
                                 </div>
 
-                                <div
-                                    class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
+                                <div class="flex items-center p-4 border-b cursor-pointer hover:bg-pink-50">
                                     <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-                                        <img src="imagens/pedro.png"
-                                            alt="pedro" class="w-full h-full object-cover">
+                                        <img src="imagens/pedro.png" alt="pedro" class="w-full h-full object-cover">
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-medium">Pedro Silva</h4>
@@ -1549,8 +1532,7 @@
 
                                 <div class="flex items-center p-4 cursor-pointer hover:bg-pink-50">
                                     <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-                                        <img src="imagens/salao.png"
-                                            alt="salao" class="w-full h-full object-cover">
+                                        <img src="imagens/salao.png" alt="salao" class="w-full h-full object-cover">
                                     </div>
                                     <div class="flex-1">
                                         <h4 class="font-medium">Qualquer profissional</h4>
@@ -1734,7 +1716,7 @@
                             </div>
                         </div>
 
-                        <!-- Step 5: Payment -->
+                        <!-- Step 5: pagamento -->
                         <div id="step5" class="hidden fade-in">
                             <h3 class="text-xl font-bold text-gray-800 mb-6">Pagamento</h3>
                             <p class="text-gray-600 mb-6">Resumo do agendamento:</p>
@@ -1761,21 +1743,36 @@
                             <div class="mb-6">
                                 <h4 class="font-bold text-gray-800 mb-4">Método de pagamento</h4>
 
-                                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-                                    <button
-                                        class="border rounded-lg py-2 hover:shadow-md transition active border-pink-500">
-                                        <i class="fab fa-cc-visa text-2xl text-gray-700"></i>
-                                    </button>
-                                    <button class="border rounded-lg py-2 hover:shadow-md transition">
-                                        <i class="fab fa-cc-mastercard text-2xl text-gray-700"></i>
-                                    </button>
-                                    <button class="border rounded-lg py-2 hover:shadow-md transition">
-                                        <i class="fas fa-credit-card text-2xl text-gray-700"></i>
-                                    </button>
-                                    <button class="border rounded-lg py-2 hover:shadow-md transition">
-                                        <i class="fas fa-barcode text-2xl text-gray-700"></i>
-                                    </button>
+                                <!-- Seleção de bandeira do cartão -->
+                                <!-- Seleção de bandeira com 3 botões -->
+                                <!-- Seleção de bandeira com imagens -->
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 mb-2">Bandeira do Cartão</label>
+                                    <div class="flex gap-4">
+                                        <button type="button"
+                                            class="bandeira-btn p-2 border rounded-lg hover:shadow-md transition"
+                                            data-bandeira="visa">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
+                                                alt="Visa" class="h-6">
+                                        </button>
+                                        <button type="button"
+                                            class="bandeira-btn p-2 border rounded-lg hover:shadow-md transition"
+                                            data-bandeira="mastercard">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+                                                alt="MasterCard" class="h-6">
+                                        </button>
+                                        <button type="button"
+                                            class="bandeira-btn p-2 border rounded-lg hover:shadow-md transition"
+                                            data-bandeira="elo">
+                                            <img src="https://cashfree.com.br/wp-content/uploads/2020/06/cart%C3%B5es-Elo.jpg"
+                                                alt="Elo" class="h-6">
+                                        </button>
+                                    </div>
+                                    <input type="hidden" id="bandeiraSelecionada" name="bandeiraSelecionada">
                                 </div>
+
+
+
 
                                 <!-- Credit Card Form -->
                                 <div id="creditCardForm">
@@ -1827,10 +1824,10 @@
                                     class="text-pink-500 hover:text-pink-600 px-4 py-2 rounded-full transition">
                                     <i class="fas fa-arrow-left mr-2"></i> Voltar
                                 </button>
-                                <button id="confirmPayment"
+                                <button id="confirmarpagamento"
                                     class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-2 rounded-full transition flex items-center">
-                                    <span id="paymentText">Confirmar Pagamento</span>
-                                    <span id="paymentLoader" class="hidden ml-2">
+                                    <span id="textopagamento">Confirmar Pagamento</span>
+                                    <span id="pagarcarregamento" class="hidden ml-2">
                                         <div
                                             class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-5 w-5">
                                         </div>
@@ -1839,7 +1836,7 @@
                             </div>
                         </div>
 
-                        <!-- Step 6: Confirmation -->
+                        <!-- passo 6: Confirmaçao -->
                         <div id="step6" class="hidden fade-in text-center py-8">
                             <div
                                 class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -1876,14 +1873,12 @@
                             </div>
 
                             <div class="flex justify-center space-x-4">
-                                <button
+                                <a href="#contato"
                                     class="border-2 border-pink-500 text-pink-500 hover:bg-pink-50 px-6 py-2 rounded-full transition">
-                                    <i class="far fa-calendar mr-2"></i> Adicionar ao Calendário
-                                </button>
-                                <button
-                                    class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full transition">
-                                    <i class="fas fa-home mr-2"></i> Voltar ao Início
-                                </button>
+                                    <i class="mr-2"></i> Enviar mensagem
+                                </a>
+                                <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full transition">
+                                <i class="fas fa-home mr-2"></i> Voltar ao Início </a>
                             </div>
                         </div>
                     </div>
@@ -1892,7 +1887,7 @@
         </div>
     </section>
 
-    <!-- Waiting List -->
+    <!-- lista de espera -->
     <section id="waitingList" class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="bg-pink-50 rounded-xl p-8 md:p-12 shadow-md">
@@ -1962,8 +1957,8 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-50">
+    <!-- secao de contato -->
+    <section id="contato" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
@@ -2002,6 +1997,7 @@
                 </div>
             </div>
 
+            
             <div class="bg-white rounded-xl shadow-xl overflow-hidden">
                 <div class="md:flex">
                     <div class="md:w-1/2 p-8 md:p-12">

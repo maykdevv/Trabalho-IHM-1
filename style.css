@@ -1,6 +1,6 @@
 /* Custom CSS for elements not covered by Tailwind */
 .hero-gradient {
-    background: linear-gradient(135deg, rgba(249,226,226,0.9) 0%, rgba(255,255,255,0.9) 100%);
+    background: linear-gradient(135deg, rgba(249, 226, 226, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
 }
 
 .service-card:hover {
@@ -21,8 +21,13 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .booking-stepper .step {
@@ -49,8 +54,13 @@
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Custom checkbox */
@@ -84,7 +94,8 @@
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
     font-weight: 900;
-    color: #ec4899; /* tom rosa forte */
+    color: #ec4899;
+    /* tom rosa forte */
     text-shadow: 1px 1px 0 #fff, 2px 2px 5px rgba(244, 114, 182, 0.5);
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -93,4 +104,15 @@
 
 .marca-eclatt:hover {
     color: #be185d;
+}
+
+.bandeira-btn {
+    border: 2px solid #e5e7eb;
+    /* cinza claro */
+}
+
+.bandeira-btn.selecionada {
+    border-color: #ec4899;
+    /* rosa */
+    box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.3);
 }

@@ -65,9 +65,9 @@ if (seletorMes) {
 }
 
 // Pagamento - simulação carregamento
-const botaoPagamento = document.getElementById('confirmPayment');
-const textoPagamento = document.getElementById('paymentText');
-const carregandoPagamento = document.getElementById('paymentLoader');
+const botaoPagamento = document.getElementById('confirmarpagamento');
+const textoPagamento = document.getElementById('textopagamento');
+const carregandoPagamento = document.getElementById('pagarcarregamento');
 
 botaoPagamento?.addEventListener('click', () => {
     textoPagamento?.classList.add('hidden');
@@ -200,3 +200,12 @@ botaoEquipe?.addEventListener('click', () => {
 });
 
 atualizarEquipe();
+
+// Selecionar apenas uma bandeira com imagem
+document.querySelectorAll('.bandeira-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.bandeira-btn').forEach(b => b.classList.remove('selecionada'));
+        btn.classList.add('selecionada');
+        document.getElementById('bandeiraSelecionada').value = btn.dataset.bandeira;
+    });
+});
