@@ -132,24 +132,26 @@ function atualizarIndicadores() {
     });
 }
 
-// Seleciona apenas 1 profissional
+
+// Seleção única para profissionais
 document.querySelectorAll('#step2 .cursor-pointer').forEach(el => {
-    el.addEventListener('click', () => {
-        document.querySelectorAll('#step2 .cursor-pointer').forEach(p =>
-            p.classList.remove('bg-pink-50', 'border-pink-200')
-        );
-        el.classList.add('bg-pink-50', 'border-pink-200');
-    });
+  el.addEventListener('click', () => {
+    document.querySelectorAll('#step2 .cursor-pointer').forEach(p =>
+      p.classList.remove('selecionado')
+    );
+    el.classList.add('selecionado');
+  });
 });
 
-// Seleciona apenas 1 serviço com destaque
+
+// Seleção única para serviços
 document.querySelectorAll('#step1 .cursor-pointer').forEach(el => {
-    el.addEventListener('click', () => {
-        document.querySelectorAll('#step1 .cursor-pointer').forEach(p =>
-            p.classList.remove('bg-pink-50', 'border-pink-200')
-        );
-        el.classList.add('bg-pink-50', 'border-pink-200');
-    });
+  el.addEventListener('click', () => {
+    document.querySelectorAll('#step1 .cursor-pointer').forEach(p =>
+      p.classList.remove('selecionado')
+    );
+    el.classList.add('selecionado');
+  });
 });
 
 // Filtro de categoria de serviços
@@ -183,7 +185,7 @@ atualizarServicos();
 
 
 // Mostrar/esconder profissionais além dos 4 primeiros
-const cartasEquipe = document.querySelectorAll('#professionals .card-hover');
+const cartasEquipe = document.querySelectorAll('#profissionais .card-hover');
 const botaoEquipe = document.getElementById('mostrarprofissa');
 let mostrarTodaEquipe = false;
 

@@ -1,53 +1,115 @@
-/* Custom CSS for elements not covered by Tailwind */
+body {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+/* Hero e gradientes */
+.hero-gradient,
+.bg-gradient-to-r.from-pink-50.to-white,
+.bg-gradient-to-b.from-pink-50.to-white {
+    background: linear-gradient(135deg, #1f2937, #111827);
+
+}
+
 .hero-gradient {
-    background: linear-gradient(135deg, rgba(249, 226, 226, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+    background: linear-gradient(90deg, #3f0d1d 0%, #111827 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+/* Cartões escuros */
+.service-card,
+.card-hover,
+.bg-white,
+.bg-pink-50,
+.bg-gray-50,
+input,
+select,
+textarea {
+    background-color: #1f2937 !important;
+    color: #f3f4f6 !important;
 }
 
-.card-hover {
-    transition: all 0.3s ease;
-}
-
+.service-card:hover,
 .card-hover:hover {
-    transform: scale(1.02);
+    background-color: #374151 !important;
 }
 
-.fade-in {
-    animation: fadeIn 0.5s ease-in-out;
+/* Textos escuros substituídos por claros */
+.text-gray-800,
+.text-gray-700,
+.text-gray-600,
+.text-gray-500 {
+    color: #d1d5db !important;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+/* Borda visível no escuro */
+.border-gray-200,
+.border {
+    border-color: #4b5563 !important;
 }
 
-.booking-stepper .step {
-    position: relative;
+/* Corrigir sombras */
+.shadow-md,
+.shadow-lg,
+.shadow-xl {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8) !important;
 }
 
-.booking-stepper .step:not(:last-child):after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -30px;
-    width: 20px;
-    height: 2px;
-    background-color: #e5e7eb;
+/* Inputs escuros */
+input,
+select,
+textarea {
+    border: 1px solid #4b5563 !important;
+    background-color: #1f2937 !important;
+    color: #f3f4f6 !important;
 }
 
-.input-error {
-    border-color: #f87171;
+/* Cabeçalho personalizado */
+.marca-eclatt {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #ec4899;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
 }
 
+
+/* Hover e transições */
+a:hover,
+button:hover {
+    background-color: #374151 !important;
+    color: #f9fafb !important;
+    filter: brightness(1.1);
+}
+
+button,
+a,
+input,
+select {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Etapas do agendamento */
+.booking-stepper .step div:first-child {
+    background-color: #374151 !important;
+    color: #f3f4f6 !important;
+}
+
+.booking-stepper .step div:first-child.bg-pink-500 {
+    background-color: #ec4899 !important;
+    color: #fff !important;
+}
+
+/* Indicador entre etapas */
+.booking-stepper .step:not(:last-child)::after {
+    background-color: #4b5563;
+}
+
+/* Loader */
 .loader {
     border-top-color: #f472b6;
     animation: spin 1s linear infinite;
@@ -63,7 +125,22 @@
     }
 }
 
-/* Custom checkbox */
+/* Animações */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Checkbox personalizado */
 .custom-checkbox {
     appearance: none;
     width: 20px;
@@ -90,29 +167,46 @@
     transform: rotate(45deg);
 }
 
-.marca-eclatt {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    font-weight: 900;
-    color: #ec4899;
-    /* tom rosa forte */
-    text-shadow: 1px 1px 0 #fff, 2px 2px 5px rgba(244, 114, 182, 0.5);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-.marca-eclatt:hover {
-    color: #be185d;
-}
-
+/* Botão de bandeira */
 .bandeira-btn {
-    border: 2px solid #e5e7eb;
-    /* cinza claro */
+    border: 2px solid #4b5563;
 }
 
 .bandeira-btn.selecionada {
     border-color: #ec4899;
-    /* rosa */
     box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.3);
+}
+
+/* Scrollbar personalizada para modo escuro */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6b7280;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #9ca3af;
+}
+
+/* Corrige hover branco nas opções de serviço */
+#step1 .cursor-pointer:hover,
+#step2 .cursor-pointer:hover,
+#step3 .grid button:hover {
+    background-color: #374151 !important;
+    color: #f3f4f6 !important;
+    border-color: #ec4899 !important;
+}
+
+/* Estado selecionado para serviços e profissionais */
+#step1 .cursor-pointer.selecionado,
+#step2 .cursor-pointer.selecionado {
+  background-color: #4b5563 !important;
+  border: 2px solid #ec4899 !important;
 }
