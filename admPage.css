@@ -1,0 +1,119 @@
+:root {
+    --primary: #ec4899;
+    --primary-light: #ffffff;
+    --primary-dark: #db2777;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.sidebar {
+    transition: all 0.3s ease;
+    background-color: white; /* Garantir sidebar branca */
+    color: black; /* Garantir texto preto */
+}
+
+.holographic-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.holographic-card:hover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(236, 72, 153, 0.2),
+        rgba(236, 72, 153, 0.1),
+        transparent
+    );
+    transform: rotate(30deg);
+    z-index: 1;
+}
+
+.kpi-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.activity-item {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.activity-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--primary);
+    border-radius: 3px;
+}
+
+.dark-mode {
+    background-color: #1a1a2e;
+    color: #000000;
+}
+
+.dark-mode .sidebar {
+    background-color: #16213e;
+}
+
+.dark-mode .card {
+    background-color: #0f3460;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        z-index: 50;
+        height: 100vh;
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 40;
+        display: none;
+    }
+    
+    .overlay.active {
+        display: block;
+    }
+}
+
+/* Garantir texto preto na sidebar */
+.sidebar,
+.sidebar * {
+    color: rgb(255, 255, 255) !important;
+}
+
+.sidebar a,
+.sidebar h3,
+.sidebar span,
+.sidebar p {
+    color: rgb(206, 198, 198) !important;
+}

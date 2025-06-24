@@ -69,12 +69,25 @@ textarea {
 /* Cabeçalho personalizado */
 .marca-eclatt {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.6rem;
+    font-size: 3.6rem; /* Você pode querer ajustar este tamanho para que a imagem apareça melhor */
     font-weight: 700;
-    color: #ec4899;
+    /* REMOVIDO: color: #ec4899; -> Substituído por color: transparent; para a imagem aparecer */
     letter-spacing: 1px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    /* REMOVIDO: text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); -> Entra em conflito com o efeito de máscara */
     text-transform: uppercase;
+
+    /* Novas propriedades para o efeito de máscara com a imagem */
+    background-image: url(imagens/fundomarca.png);
+    background-size: cover; /* Faz a imagem cobrir toda a área do texto */
+    background-position: center; /* Centraliza a imagem no texto */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+
+    -webkit-background-clip: text; /* Para navegadores baseados em WebKit (Chrome, Safari) */
+    background-clip: text; /* Recorta o fundo para o formato do texto */
+    color: transparent; /* Torna o texto transparente para que o fundo apareça */
+
+    /* Opcional: Adicione um display: inline-block se o elemento for um <a> e precisar de mais controle sobre a área */
+    display: inline-block;
 }
 
 

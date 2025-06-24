@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éclat Femme | Salão e Centro de Estética</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="admPage.css">
+</head>
+<body class="bg-gray-50">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <div class="sidebar bg-white w-64 border-r border-gray-200 flex flex-col">
+            <div class="p-4 flex items-center justify-between border-b border-gray-200">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center">
+                    </div>
+                    <span class="font-bold text-lg text-black">Éclat Femme</span>
+                </div>
+                <button id="sidebar-toggle" class="md:hidden text-gray-500">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto py-4">
+                <nav>
+                    <div class="px-4 mb-6">
+                        <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Principal</h3>
+                        <ul class="mt-2 space-y-1">
+                            <li>
+                                <a href="#" class="flex items-center px-3 py-2 text-sm font-medium rounded-md bg-pink-50 text-pink-700">
+                                    <i class="fas fa-tachometer-alt mr-3 text-pink-600"></i>
+                                    Painel
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-gray-100">
+                                    <i class="fas fa-shopping-cart mr-3 text-gray-500"></i>
+                                    Histórico de Vendas
+                                    <span class="ml-auto bg-pink-100 text-pink-800 text-xs font-semibold px-2 py-0.5 rounded-full">3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-gray-100">
+                                    <i class="fas fa-chart-line mr-3 text-gray-500"></i>
+                                    Análises
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-gray-100">
+                                    <i class="fas fa-cog mr-3 text-gray-500"></i>
+                                    Configurações
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="px-4 mb-6">
+                        <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Relatórios</h3>
+                        <ul class="mt-2 space-y-1">
+                            <li>
+                                <a href="#" class="flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-gray-100">
+                                    <i class="fas fa-file-invoice mr-3 text-gray-500"></i>
+                                    Mensal
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-gray-100">
+                                    <i class="fas fa-file-alt mr-3 text-gray-500"></i>
+                                    Trimestral
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-gray-100">
+                                    <i class="fas fa-file-export mr-3 text-gray-500"></i>
+                                    Exportar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            
+            <div class="p-4 border-t border-gray-200">
+                <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Perfil do usuário">
+                    <div class="ml-3">
+                        <p class="text-sm font-medium text-gray-700">Sarah Johnson</p>
+                        <p class="text-xs text-gray-500">Administradora</p>
+                    </div>
+                    <button class="ml-auto text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Overlay para mobile -->
+        <div class="overlay"></div>
+        
+        <!-- Conteúdo principal -->
+        <div class="flex-1 overflow-auto">
+            <!-- Navegação superior -->
+            <header class="bg-white border-b border-gray-200">
+                <div class="px-4 py-3 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <button id="mobile-menu-button" class="md:hidden text-gray-500 mr-2">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <h1 class="text-xl font-semibold text-gray-800">Painel</h1>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <button id="search-button" class="text-gray-500 hover:text-gray-700">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <div id="search-box" class="hidden absolute right-0 mt-2 w-64 bg-white rounded-md shadow-lg z-10">
+                                <input type="text" placeholder="Pesquisar..." class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                        </div>
+                        
+                        <button id="voice-search" class="text-gray-500 hover:text-gray-700 relative group">
+                            <i class="fas fa-microphone"></i>
+                            <span class="absolute -top-2 -right-2 w-3 h-3 bg-pink-500 rounded-full animate-ping opacity-0 group-hover:opacity-100"></span>
+                        </button>
+                        
+                        <button id="dark-mode-toggle" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        
+                        <div class="relative">
+                            <button class="text-gray-500 hover:text-gray-700">
+                                <i class="fas fa-bell"></i>
+                                <span class="absolute -top-1 -right-1 w-3 h-3 bg-pink-500 rounded-full"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Área de conteúdo principal -->
+            <main class="p-4">
+                <!-- Cartões de KPIs -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="kpi-card bg-white rounded-lg shadow p-6 hover:shadow-md">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-medium text-black-500">Vendas Totais</p>
+                                <p class="text-2xl font-bold mt-1">R$24.780</p>
+                                <p class="text-sm mt-2">
+                                    <span class="text-green-500 font-medium">+12.5%</span> desde o mês passado
+                                </p>
+                            </div>
+                            <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center">
+                                <i class="fas fa-dollar-sign text-pink-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="kpi-card bg-white rounded-lg shadow p-6 hover:shadow-md">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Taxa de Conversão</p>
+                                <p class="text-2xl font-bold mt-1">3.42%</p>
+                                <p class="text-sm mt-2">
+                                    <span class="text-green-500 font-medium">+2.1%</span> desde o mês passado
+                                </p>
+                            </div>
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
+                                <i class="fas fa-percentage text-purple-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="kpi-card bg-white rounded-lg shadow p-6 hover:shadow-md">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Usuários Ativos</p>
+                                <p class="text-2xl font-bold mt-1">1.248</p>
+                                <p class="text-sm mt-2">
+                                    <span class="text-green-500 font-medium">+8.7%</span> desde o mês passado
+                                </p>
+                            </div>
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                                <i class="fas fa-users text-blue-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gráficos -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+                    <div class="lg:col-span-2 bg-white rounded-lg shadow p-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-semibold">Visão Geral de Vendas</h2>
+                            <div class="flex space-x-2">
+                                <button class="px-3 py-1 text-xs bg-pink-100 text-pink-700 rounded-full">Semanal</button>
+                                <button class="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">Mensal</button>
+                                <button class="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">Anual</button>
+                            </div>
+                        </div>
+                        <canvas id="salesChart" height="250"></canvas>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-4">
+                        <h2 class="text-lg font-semibold mb-4">Fontes de Tráfego</h2>
+                        <canvas id="trafficChart" height="250"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Atividade Recente & Mapa de Calor -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-white rounded-lg shadow p-4">
+                        <h2 class="text-lg font-semibold mb-4">Atividade Recente</h2>
+                        <div class="space-y-4">
+                            <div class="activity-item">
+                                <p class="text-sm font-medium">Novo pedido #1234 realizado</p>
+                                <p class="text-xs text-gray-500 mt-1">2 minutos atrás</p>
+                            </div>
+                            <div class="activity-item">
+                                <p class="text-sm font-medium">Cadastro de usuário concluído</p>
+                                <p class="text-xs text-gray-500 mt-1">15 minutos atrás</p>
+                            </div>
+                            <div class="activity-item">
+                                <p class="text-sm font-medium">Pagamento recebido para #1234</p>
+                                <p class="text-xs text-gray-500 mt-1">1 hora atrás</p>
+                            </div>
+                            <div class="activity-item">
+                                <p class="text-sm font-medium">Novo produto adicionado ao catálogo</p>
+                                <p class="text-xs text-gray-500 mt-1">3 horas atrás</p>
+                            </div>
+                            <div class="activity-item">
+                                <p class="text-sm font-medium">Atualização do sistema concluída</p>
+                                <p class="text-xs text-gray-500 mt-1">Ontem</p>
+                            </div>
+                        </div>
+                        <button class="mt-4 text-sm text-pink-600 hover:text-pink-700 font-medium">Ver toda a atividade</button>
+                    </div>
+                    
+                    <div class="lg:col-span-2 bg-white rounded-lg shadow p-4">
+                        <h2 class="text-lg font-semibold mb-4">Mapa de Calor de Atividade do Usuário</h2>
+                        <div class="overflow-x-auto">
+                            <div class="min-w-max">
+                                <div class="grid grid-cols-8 gap-1">
+                                    <!-- Cabeçalho do mapa de calor (dias) -->
+                                    <div></div>
+                                    <div class="text-xs text-center py-1">Seg</div>
+                                    <div class="text-xs text-center py-1">Ter</div>
+                                    <div class="text-xs text-center py-1">Qua</div>
+                                    <div class="text-xs text-center py-1">Qui</div>
+                                    <div class="text-xs text-center py-1">Sex</div>
+                                    <div class="text-xs text-center py-1">Sáb</div>
+                                    <div class="text-xs text-center py-1">Dom</div>
+                                    
+                                    <!-- Células do mapa de calor -->
+                                    <div class="text-xs py-1">8 AM</div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-100 hover:bg-pink-200 cursor-pointer tooltip" data-tooltip="Seg 8AM: 12 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-50 hover:bg-pink-100 cursor-pointer tooltip" data-tooltip="Ter 8AM: 5 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-100 hover:bg-pink-200 cursor-pointer tooltip" data-tooltip="Qua 8AM: 15 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-200 hover:bg-pink-300 cursor-pointer tooltip" data-tooltip="Qui 8AM: 22 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-100 hover:bg-pink-200 cursor-pointer tooltip" data-tooltip="Sex 8AM: 18 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-50 hover:bg-pink-100 cursor-pointer tooltip" data-tooltip="Sáb 8AM: 3 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-50 hover:bg-pink-100 cursor-pointer tooltip" data-tooltip="Dom 8AM: 2 usuários"></div>
+                                    
+                                    <div class="text-xs py-1">12 PM</div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-300 hover:bg-pink-400 cursor-pointer tooltip" data-tooltip="Seg 12PM: 45 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-400 hover:bg-pink-500 cursor-pointer tooltip" data-tooltip="Ter 12PM: 52 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-300 hover:bg-pink-400 cursor-pointer tooltip" data-tooltip="Qua 12PM: 38 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-500 hover:bg-pink-600 cursor-pointer tooltip" data-tooltip="Qui 12PM: 68 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-400 hover:bg-pink-500 cursor-pointer tooltip" data-tooltip="Sex 12PM: 55 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-200 hover:bg-pink-300 cursor-pointer tooltip" data-tooltip="Sáb 12PM: 25 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-100 hover:bg-pink-200 cursor-pointer tooltip" data-tooltip="Dom 12PM: 18 usuários"></div>
+                                    
+                                    <div class="text-xs py-1">4 PM</div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-400 hover:bg-pink-500 cursor-pointer tooltip" data-tooltip="Seg 4PM: 58 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-300 hover:bg-pink-400 cursor-pointer tooltip" data-tooltip="Ter 4PM: 42 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-500 hover:bg-pink-600 cursor-pointer tooltip" data-tooltip="Qua 4PM: 72 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-400 hover:bg-pink-500 cursor-pointer tooltip" data-tooltip="Qui 4PM: 55 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-300 hover:bg-pink-400 cursor-pointer tooltip" data-tooltip="Sex 4PM: 38 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-200 hover:bg-pink-300 cursor-pointer tooltip" data-tooltip="Sáb 4PM: 22 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-100 hover:bg-pink-200 cursor-pointer tooltip" data-tooltip="Dom 4PM: 15 usuários"></div>
+                                    
+                                    <div class="text-xs py-1">8 PM</div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-200 hover:bg-pink-300 cursor-pointer tooltip" data-tooltip="Seg 8PM: 28 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-300 hover:bg-pink-400 cursor-pointer tooltip" data-tooltip="Ter 8PM: 35 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-200 hover:bg-pink-300 cursor-pointer tooltip" data-tooltip="Qua 8PM: 25 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-300 hover:bg-pink-400 cursor-pointer tooltip" data-tooltip="Qui 8PM: 42 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-400 hover:bg-pink-500 cursor-pointer tooltip" data-tooltip="Sex 8PM: 52 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-300 hover:bg-pink-400 cursor-pointer tooltip" data-tooltip="Sáb 8PM: 38 usuários"></div>
+                                    <div class="w-6 h-6 rounded-sm bg-pink-200 hover:bg-pink-300 cursor-pointer tooltip" data-tooltip="Dom 8PM: 22 usuários"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-end mt-2 space-x-2">
+                            <span class="text-xs">Menos</span>
+                            <div class="flex space-x-1">
+                                <div class="w-4 h-4 rounded-sm bg-pink-50"></div>
+                                <div class="w-4 h-4 rounded-sm bg-pink-200"></div>
+                                <div class="w-4 h-4 rounded-sm bg-pink-400"></div>
+                                <div class="w-4 h-4 rounded-sm bg-pink-600"></div>
+                            </div>
+                            <span class="text-xs">Mais</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pedidos Recentes -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+                        <h2 class="text-lg font-semibold">Pedidos Recentes</h2>
+                        <div class="flex space-x-2">
+                            <button class="px-3 py-1 text-xs bg-pink-100 text-pink-700 rounded-full">Exportar CSV</button>
+                            <button class="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">Ver Todos</button>
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID do Pedido</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cliente</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr class="holographic-card hover:bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#12345</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">John Smith</div>
+                                                <div class="text-sm text-gray-500">john@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">15 Maio 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Concluído</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">R$245,00</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-pink-600 hover:text-pink-900 mr-3">Ver</button>
+                                        <button class="text-gray-600 hover:text-gray-900">Editar</button>
+                                    </td>
+                                </tr>
+                                
+                                <tr class="holographic-card hover:bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#12344</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/28.jpg" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">Emma Johnson</div>
+                                                <div class="text-sm text-gray-500">emma@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">14 Maio 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Processando</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">R$189,00</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-pink-600 hover:text-pink-900 mr-3">Ver</button>
+                                        <button class="text-gray-600 hover:text-gray-900">Editar</button>
+                                    </td>
+                                </tr>
+                                
+                                <tr class="holographic-card hover:bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#12343</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/75.jpg" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">Michael Brown</div>
+                                                <div class="text-sm text-gray-500">michael@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">13 Maio 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Enviado</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">R$320,00</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-pink-600 hover:text-pink-900 mr-3">Ver</button>
+                                        <button class="text-gray-600 hover:text-gray-900">Editar</button>
+                                    </td>
+                                </tr>
+                                
+                                <tr class="holographic-card hover:bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#12342</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/42.jpg" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">Sarah Wilson</div>
+                                                <div class="text-sm text-gray-500">sarah@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">12 Maio 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Concluído</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">R$275,00</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-pink-600 hover:text-pink-900 mr-3">Ver</button>
+                                        <button class="text-gray-600 hover:text-gray-900">Editar</button>
+                                    </td>
+                                </tr>
+                                
+                                <tr class="holographic-card hover:bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#12341</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/63.jpg" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">David Taylor</div>
+                                                <div class="text-sm text-gray-500">david@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">11 Maio 2023</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Cancelado</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">R$150,00</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-pink-600 hover:text-pink-900 mr-3">Ver</button>
+                                        <button class="text-gray-600 hover:text-gray-900">Editar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="px-6 py-3 border-t border-gray-200 flex items-center justify-between">
+                        <div class="text-sm text-gray-500">
+                            Mostrando <span class="font-medium">1</span> a <span class="font-medium">5</span> de <span class="font-medium">24</span> resultados
+                        </div>
+                        <div class="flex space-x-1">
+                            <button class="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">Anterior</button>
+                            <button class="px-3 py-1 text-xs bg-pink-100 text-pink-700 rounded-full">1</button>
+                            <button class="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">2</button>
+                            <button class="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">3</button>
+                            <button class="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">Próximo</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="admPage.js"></script>
+</body>
+</html>
