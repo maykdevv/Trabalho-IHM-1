@@ -114,14 +114,18 @@ if (seletorMes) {
 const botaoParaResumo = document.getElementById('nextStep3');
 botaoParaResumo?.addEventListener('click', () => {
   const resumo = document.getElementById('resumoAgendamento');
+  const campoData = document.getElementById('campoData');
+  const dataSelecionadaValor = campoData?.value || '';
+
   if (resumo) {
     resumo.querySelector('#resumoServico').innerText = servicoSelecionado || 'Não selecionado';
     resumo.querySelector('#resumoProfissional').innerText = profissionalSelecionado || 'Não selecionado';
-    resumo.querySelector('#resumoData').innerText = dataSelecionada || 'Não selecionada';
+    resumo.querySelector('#resumoData').innerText = dataSelecionadaValor || 'Não selecionada';
     resumo.querySelector('#resumoHorario').innerText = horarioSelecionado || 'Não selecionado';
     resumo.querySelector('#resumoPreco').innerText = precoSelecionado || 'R$ 0,00';
   }
 });
+
 
 
 
